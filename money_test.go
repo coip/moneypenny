@@ -236,6 +236,60 @@ func BenchmarkFromf64_10(b *testing.B) {
 	}
 }
 
+func BenchmarkFromf64_Max(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+308)
+	}
+}
+
+func BenchmarkFromf64_Max95(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+290)
+	}
+}
+
+func BenchmarkFromf64_Max80(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+240)
+	}
+}
+
+func BenchmarkFromf64_Max65(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+190)
+	}
+}
+
+func BenchmarkFromf64_Max50(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+140)
+	}
+}
+
+func BenchmarkFromf64_Max35(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+80)
+	}
+}
+
+func BenchmarkFromf64_Max10(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(1.7976931348623157e+30)
+	}
+}
+
+func BenchmarkFromf64_MaxNeg(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(-1.7976931348623157e+308)
+	}
+}
+
+func BenchmarkFromf64_Min(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(4.940656458412465441765687928682213723651e-323)
+	}
+}
+
 func BenchmarkString(b *testing.B) {
 	m := Fromi(100)
 	for n := 0; n < b.N; n++ {
