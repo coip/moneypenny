@@ -31,6 +31,16 @@ func Fromi64(m int64) Money {
 	return Money(decimal.New(m, -2))
 }
 
+//Add enables m := m1 + m2
+func (m1 Money) Add(m2 Money) Money {
+	return Money(decimal.Decimal(m1).Add(decimal.Decimal(m2)))
+}
+
+//Eq enables if m1.Eq(m2) { log.Println("they're ==") }
+func (m1 Money) Eq(m2 Money) bool {
+	return decimal.Decimal(m1).Equal(decimal.Decimal(m2))
+}
+
 func (m Money) ToPennies() Pennies {
 	return Pennies(decimal.Decimal(m).RoundBank(2).Shift(2).IntPart())
 }
