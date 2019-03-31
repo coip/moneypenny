@@ -2,11 +2,6 @@ package money
 
 import "testing"
 
-// func ExampleFromFromString() {
-// 	m := Froms("100")
-// 	log.Println("100 -> %s", m)
-// }
-
 func TestCovForTemplateFormatterCaller(t *testing.T) {
 	c := struct {
 		in     int
@@ -142,34 +137,29 @@ func TestFromFromInt64(t *testing.T) {
 }
 
 func BenchmarkFromString10(b *testing.B) {
-	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		FromString("10")
 	}
 }
 func BenchmarkFromString10DollarSign(b *testing.B) {
-	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		FromString("$10")
 	}
 }
 
 func BenchmarkFromString1000(b *testing.B) {
-	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		FromString("1000")
 	}
 }
 
 func BenchmarkFromString10Bucks(b *testing.B) {
-	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		FromString("10.00")
 	}
 }
 
 func BenchmarkFromStringInvalid(b *testing.B) {
-	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		FromString("coip")
 	}
