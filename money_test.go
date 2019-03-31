@@ -174,6 +174,42 @@ func BenchmarkFromStringInvalid(b *testing.B) {
 	}
 }
 
+func BenchmarkFromi100(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi(100)
+	}
+}
+
+func BenchmarkFromi1000(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi(1000)
+	}
+}
+
+func BenchmarkFromiMaxInt32(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi(2147483647)
+	}
+}
+
+func BenchmarkFromiMinInt32(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi(-2147483648)
+	}
+}
+
+func BenchmarkFromiMaxInt64(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi64(9223372036854775807)
+	}
+}
+
+func BenchmarkFromiMinInt64(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi64(-9223372036854775808)
+	}
+}
+
 //semi redundant. casting into int64 in the func.
 func BenchmarkFromi10(b *testing.B) {
 	for n := 0; n < b.N; n++ {
