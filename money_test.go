@@ -239,7 +239,7 @@ func BenchmarkFromf64_10(b *testing.B) {
 func BenchmarkString(b *testing.B) {
 	m := Fromi(100)
 	for n := 0; n < b.N; n++ {
-		m.String()
+		_ = m.String()
 	}
 }
 
@@ -253,7 +253,7 @@ func BenchmarkFormatter(b *testing.B) {
 func BenchmarkStringNeg(b *testing.B) {
 	m := Fromi(-100)
 	for n := 0; n < b.N; n++ {
-		m.String()
+		_ = m.String()
 	}
 }
 
