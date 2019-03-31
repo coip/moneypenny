@@ -31,6 +31,10 @@ func Fromi64(m int64) Money {
 	return Money(decimal.New(m, -2))
 }
 
+func (m Money) ToPennies() Pennies {
+	return Pennies(decimal.Decimal(m).RoundBank(2).Shift(2).IntPart())
+}
+
 func (m Money) String() string {
 	if !decimal.Decimal(m).IsNegative() {
 		return "$" + decimal.Decimal(m).StringFixedBank(2)
