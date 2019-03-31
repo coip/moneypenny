@@ -2,14 +2,21 @@ package money
 
 import "testing"
 
-func TestCovForTemplateFormatterCaller(t *testing.T) {
+func TestCovForTemplateFormatter(t *testing.T) {
+	amt := 100
+
 	c := struct {
-		in     int
-		result Money
-		want   string
-	}{1, Fromi(100), "$1.00"}
-	if FormatAsMoney(c.result) != c.want {
-		t.Errorf("Froms(%q).String() == %q, want %q", c.in, c.result, c.want)
+		in   int
+		m    Money
+		want string
+	}{
+		amt,
+		Fromi(amt),
+		Fromi(amt).String(),
+	}
+
+	if FormatAsMoney(c.m) != c.want {
+		t.Errorf("FormatAsMoney(Fromi(%d)) == %s, want %q", c.in, FormatAsMoney(c.m), c.want)
 	}
 }
 func TestFromFromString(t *testing.T) {
