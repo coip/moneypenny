@@ -167,3 +167,57 @@ func BenchmarkFromStringInvalid(b *testing.B) {
 		FromString("coip")
 	}
 }
+
+//semi redundant. casting into int64 in the func.
+func BenchmarkFromi10(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi(10)
+	}
+}
+
+//semi redundant.
+func BenchmarkFromi64_10(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromi64(10)
+	}
+}
+
+func BenchmarkFromf32_10(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf32(10)
+	}
+}
+
+func BenchmarkFromf64_10(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		Fromf64(10)
+	}
+}
+
+func BenchmarkString(b *testing.B) {
+	m := Fromi(100)
+	for n := 0; n < b.N; n++ {
+		m.String()
+	}
+}
+
+func BenchmarkFormatter(b *testing.B) {
+	m := Fromi(100)
+	for n := 0; n < b.N; n++ {
+		FormatAsMoney(m)
+	}
+}
+
+func BenchmarkStringNeg(b *testing.B) {
+	m := Fromi(-100)
+	for n := 0; n < b.N; n++ {
+		m.String()
+	}
+}
+
+func BenchmarkFormatterNeg(b *testing.B) {
+	m := Fromi(-100)
+	for n := 0; n < b.N; n++ {
+		FormatAsMoney(m)
+	}
+}
