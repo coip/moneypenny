@@ -1,8 +1,6 @@
 package money
 
 import (
-	"strings"
-
 	"github.com/shopspring/decimal"
 )
 
@@ -13,7 +11,6 @@ func FromString(m string) Money {
 	if string(m[0]) == "$" {
 		m = m[1:]
 	}
-	m = strings.Replace(m, ",", "", -1)
 	tmp, e := decimal.NewFromString(m)
 	if e != nil {
 		return Money(decimal.NewFromFloat(0))
