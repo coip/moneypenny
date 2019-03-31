@@ -29,7 +29,7 @@ but provides a means of homologating various input types while consolidating int
     need to target both Windows and Linux, but thats to come.
 
 ```
-Running tool: C:\Go\bin\go.exe test -benchmem -run=^$ github.com\coip\money -bench . -coverprofile=C:\Temp\vscode-goqaqmJr\go-code-cover
+Running tool: C:\Go\bin\go.exe test -benchmem -run=^$ github.com\coip\money -bench . -coverprofile=C:\Users\ethan\AppData\Local\Temp\vscode-goqaqmJr\go-code-cover
 
 goos: windows
 goarch: amd64
@@ -40,14 +40,14 @@ BenchmarkFromString10DollarSignNeg-4            	 5000000	       329 ns/op	     
 BenchmarkFromString1000-4                       	 5000000	       338 ns/op	     128 B/op	       4 allocs/op
 BenchmarkFromString10Bucks-4                    	 3000000	       456 ns/op	     176 B/op	       5 allocs/op
 BenchmarkFromStringInvalid-4                    	 3000000	       626 ns/op	     192 B/op	       8 allocs/op
-BenchmarkFromi100-4                             	20000000	        99.7 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromi1000-4                            	20000000	        81.7 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromiMaxInt32-4                        	20000000	        81.5 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromiMinInt32-4                        	20000000	        79.1 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromiMaxInt64-4                        	20000000	        79.5 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromiMinInt64-4                        	20000000	        89.7 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromi10-4                              	20000000	        92.7 ns/op	    80 B/op	       2 allocs/op
-BenchmarkFromi64_10-4                           	20000000	        89.5 ns/op	    80 B/op	       2 allocs/op
+BenchmarkFromi100-4                             	20000000	        99.7 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromi1000-4                            	20000000	        81.7 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromiMaxInt32-4                        	20000000	        81.5 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromiMinInt32-4                        	20000000	        79.1 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromiMaxInt64-4                        	20000000	        79.5 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromiMinInt64-4                        	20000000	        89.7 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromi10-4                              	20000000	        92.7 ns/op	      80 B/op	       2 allocs/op
+BenchmarkFromi64_10-4                           	20000000	        89.5 ns/op	      80 B/op	       2 allocs/op
 BenchmarkFromf32_10-4                           	10000000	       205 ns/op	      80 B/op	       2 allocs/op
 BenchmarkFromf64_10-4                           	 5000000	       256 ns/op	      80 B/op	       2 allocs/op
 BenchmarkFromf64_Max-4                          	   50000	     28660 ns/op	      80 B/op	       2 allocs/op
@@ -64,14 +64,14 @@ BenchmarkFormatter-4                            	 1000000	      1850 ns/op	    1
 BenchmarkStringNeg-4                            	 1000000	      1901 ns/op	    1280 B/op	      35 allocs/op
 BenchmarkFormatterNeg-4                         	 1000000	      1942 ns/op	    1280 B/op	      35 allocs/op
 BenchmarkMoneyEqMoney-4                         	 3000000	       517 ns/op	     416 B/op	      10 allocs/op
-BenchmarkAddingPennyToPennies-4                 	2000000000	       0.45 ns/op	     0 B/op	       0 allocs/op
-BenchmarkAdding1MMPennyToPennies-4              	2000000000	       0.71 ns/op	     0 B/op	       0 allocs/op
+BenchmarkAddingPennyToPennies-4                 	2000000000	         0.45 ns/op	       0 B/op	       0 allocs/op
+BenchmarkAdding1MMPennyToPennies-4              	2000000000	         0.71 ns/op	       0 B/op	       0 allocs/op
 BenchmarkAddingPenniesToMoney-4                 	 3000000	       549 ns/op	     479 B/op	      12 allocs/op
 BenchmarkAddingPennyToMoney-4                   	 3000000	       536 ns/op	     479 B/op	      12 allocs/op
 BenchmarkAddingMoneyToPenniesAndPenny-4         	  500000	      2218 ns/op	    1328 B/op	      33 allocs/op
-BenchmarkCastingAddingPenniesNative-4           	2000000000	       0.43 ns/op	     0 B/op	       0 allocs/op
-BenchmarkCastingAddingPenniesNativeExplicit-4   	2000000000	       1.12 ns/op	     0 B/op	       0 allocs/op
-BenchmarkCastingPenniesToInt64-4                	2000000000	       0.56 ns/op	     0 B/op	       0 allocs/op
+BenchmarkCastingAddingPenniesNative-4           	2000000000	         0.43 ns/op	       0 B/op	       0 allocs/op
+BenchmarkCastingAddingPenniesNativeExplicit-4   	2000000000	         1.12 ns/op	       0 B/op	       0 allocs/op
+BenchmarkCastingPenniesToInt64-4                	2000000000	         0.56 ns/op	       0 B/op	       0 allocs/op
 PASS
 coverage: 100.0% of statements
 ok  	github.com/coip/money	72.130s
