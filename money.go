@@ -9,12 +9,6 @@ import (
 //Money bridges the gap (slightly) between semantics of client code and the plumbing its implemented via
 type Money decimal.Decimal
 
-//Doesnt handle:
-// $-100
-// $-100.00
-// ($100)
-// (100)
-
 func FromString(m string) Money {
 	if string(m[0]) == "$" {
 		m = m[1:]
