@@ -36,6 +36,11 @@ func (m1 Money) Add(m2 Money) Money {
 	return Money(decimal.Decimal(m1).Add(decimal.Decimal(m2)))
 }
 
+//AddP enables m := Money + Pennies
+func (m Money) AddP(p Pennies) Money {
+	return m.Add(p.ToMoney())
+}
+
 //Eq enables if m1.Eq(m2) { log.Println("they're ==") }
 func (m1 Money) Eq(m2 Money) bool {
 	return decimal.Decimal(m1).Equal(decimal.Decimal(m2))
