@@ -12,3 +12,7 @@ func (p Pennies) ToMoney() Money {
 func (p Pennies) i64() int64 {
 	return int64(p)
 }
+
+func (p1 Pennies) Add(p2 Pennies) Pennies {
+	return Pennies(int64(p1) + int64(p2))
+}
