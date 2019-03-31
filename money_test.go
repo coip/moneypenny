@@ -150,6 +150,12 @@ func BenchmarkFromString10DollarSign(b *testing.B) {
 	}
 }
 
+func BenchmarkFromString10DollarSignNeg(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		FromString("$-10")
+	}
+}
+
 func BenchmarkFromString1000(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		FromString("1000")
