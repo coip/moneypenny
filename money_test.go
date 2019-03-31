@@ -317,3 +317,14 @@ func BenchmarkFormatterNeg(b *testing.B) {
 		FormatAsMoney(m)
 	}
 }
+
+var (
+	m = Fromi(1000)
+	q = Fromf32(10.00)
+)
+
+func BenchmarkMoneyEqMoney(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		m.Eq(q)
+	}
+}
