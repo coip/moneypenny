@@ -6,6 +6,12 @@ this typedef is currently intended to enable a few things:
 
   - primitive agnostic, but consolidated.
 
+Doesnt handle currently: (feel free to open a pr :-) )
+ - -$100
+ - -$100.00
+ - ($100)
+ - (100)
+
 ----
 
 to elaborate on ~agnostic: [money.Money](./money.go) *is* impl'd via [decimal](https://github.com/shopspring/decimal) under the hood at the moment,
