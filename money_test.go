@@ -28,13 +28,13 @@ func TestFromFromString(t *testing.T) {
 		{"-10", "-$10.00"},
 		{"-10.50", "-$10.50"},
 		{"-10.4999", "-$10.50"},
-		//negative formatted
-		{"$10", "$10.00"},
-		{"coip", "$0.00"},
-		{"$10.50", "$10.50"},
+		//negative formatted. not very useful case
+		{"$-10", "-$10.00"},
+		{"$-10.50", "-$10.50"},
 		{"$-10.4999", "-$10.50"},
-		// lacking $-100 support, but should that be supported?
-		// also lacking ($100) and (100) support
+		//invalid
+		{"coip", "$0.00"},
+		//sporadic cases. possibly/likely missing some
 		{"25.27", "$25.27"},
 		{"0.33", "$0.33"},
 		{"$584.56", "$584.56"},
