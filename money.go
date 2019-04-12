@@ -4,7 +4,7 @@ import (
 	"github.com/shopspring/decimal"
 )
 
-//Money bridges the gap (slightly) between semantics of client code and the plumbing its implemented via
+//Money bridges the gap between semantics of client code and the plumbing its implemented via
 type Money decimal.Decimal
 
 func FromString(m string) Money {
