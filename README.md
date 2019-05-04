@@ -1,4 +1,4 @@
-# `money`
+# `moneypenny`
 
 this project is currently intended to enable a few things:
 
