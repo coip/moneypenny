@@ -19,7 +19,7 @@ func TestCovForTemplateFormatter(t *testing.T) {
 		t.Errorf("FormatAsMoney(Fromi(%d)) == %s, want %q", c.in, FormatAsMoney(c.m), c.want)
 	}
 }
-func TestFromFromString(t *testing.T) {
+func TestFromString(t *testing.T) {
 	for _, c := range []struct {
 		in, want string
 	}{
@@ -61,7 +61,7 @@ func TestFromFromString(t *testing.T) {
 	}
 }
 
-func TestFromFromInt(t *testing.T) {
+func TestFromInt(t *testing.T) {
 	for _, c := range []struct {
 		in   int
 		want string
@@ -78,7 +78,7 @@ func TestFromFromInt(t *testing.T) {
 	}
 }
 
-func TestFromFromFloat32(t *testing.T) {
+func TestFromFloat32(t *testing.T) {
 	for _, c := range []struct {
 		in   float32
 		want string
@@ -100,7 +100,7 @@ func TestFromFromFloat32(t *testing.T) {
 	}
 }
 
-func TestFromFromFloat64(t *testing.T) {
+func TestFromFloat64(t *testing.T) {
 	for _, c := range []struct {
 		in   float64
 		want string
@@ -122,7 +122,7 @@ func TestFromFromFloat64(t *testing.T) {
 	}
 }
 
-func TestFromFromInt64(t *testing.T) {
+func TestFromInt64(t *testing.T) {
 	for _, c := range []struct {
 		in   int64
 		want string
