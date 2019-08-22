@@ -31,4 +31,4 @@ jobs:
       run: go test -v
       
     - name: Benchmark
-      run: go test -bench=.
+      run: go test -benchmem -bench .
