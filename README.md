@@ -23,4 +23,4 @@ but provides a means of homologating various input types while consolidating int
 ----
 
 # latest benchmarks
-Visit the Go Build task under the Actions tab to find `unit test` and `benchmarking` results.
+Visit the Go Build task under the Actions tab to find `unit test` and `benchmarking` results..
