@@ -8,6 +8,8 @@ this project is currently intended to enable a few things:
 
   - provide a simple way for financial applications to be created with a higher degree of semantic value.
 
+  - provide a straightforward reference for actions
+
 Doesnt handle currently: (feel free to open a pr :-) )
  - -$100
  - -$100.00
