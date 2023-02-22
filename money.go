@@ -36,6 +36,16 @@ func (m1 Money) Add(m2 Money) Money {
 	return Money(decimal.Decimal(m1).Add(decimal.Decimal(m2)))
 }
 
+// Sub enables m := m1 - m2
+func (m1 Money) Sub(m2 Money) Money {
+	return Money(decimal.Decimal(m1).Sub(decimal.Decimal(m2)))
+}
+
+// Mul wraps decimal.Mul
+func (m1 Money) Mul(m2 Money) Money {
+	return Money(decimal.Decimal(m1).Mul(decimal.Decimal(m2)))
+}
+
 //AddP enables m := Money + Pennies
 func (m Money) AddP(p Pennies) Money {
 	return m.Add(p.ToMoney())
