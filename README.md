@@ -1,4 +1,4 @@
-# `moneypenny` ![badge](https://action-badges.now.sh/coip/moneypenny)
+# `moneypenny`
 
 this project is currently intended to enable a few things:
 
